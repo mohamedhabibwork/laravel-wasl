@@ -1,0 +1,70 @@
+---
+alwaysApply: true
+---
+# Cursor Guide: PHP 8.3+ Usage (Project-Specific)
+
+This project runs on PHP 8.3+. Use modern language features consistently with Laravel 11, Filament 4, and Pest 3. Prefer clarity, strict typing, and immutability where sensible.
+
+## Core Practices
+- Declare explicit return types and parameter types everywhere.
+- Use constructor property promotion and typed promoted properties.
+- Prefer enums over string constants for finite states.
+- Prefer readonly for immutable value objects and DTOs.
+- Avoid facades of DB when an Eloquent relationship or scope exists.
+
+## PHP 8.3 Highlights (Use When Appropriate)
+- Typed class constants:
+  class Money {
+      public const string CURRENCY = 'USD';
+  }
+- json_validate() to quickly validate JSON without decoding:
+  if (!json_validate($payload)) { /* handle */ }
+- Dynamic class constant fetch is now more flexible (keep names explicit for readability).
+- Random\Randomizer improvements: prefer Randomizer over mt_rand()/rand().
+
+## PHP 8.2–8.1 Features Still Relevant
+- readonly classes / properties for immutability.
+- true / false / null stand‑alone types and union/intersection types.
+- never return type for methods that always throw or exit.
+- first-class callable syntax: $fn = $this->handle(...);
+- match expression for clean branching.
+- nullsafe operator: $user?->profile?->avatar_url.
+- enums for state (backed or pure), use meaningful names and string backing by default.
+
+## Type & Casting Conventions
+- Prefer model casts via casts() method on Eloquent models.
+- Add array shape phpdoc on complex arrays for static analysis help.
+- Use DateTimeImmutable casts for timestamps intended to be immutable.
+
+## Error Handling
+- Use custom exceptions with meaningful names and messages.
+- Avoid catching \Throwable broadly unless rethrowing with context.
+
+## Performance & Safety
+- Use strict comparisons (===/!==) and typed constants.
+- Prefer spread operator and array destructuring for clarity.
+- Avoid micro‑optimizations unless benchmarked.
+
+## Anti‑Patterns
+- Mixed types without strong reason.
+- Public mutable properties on domain objects.
+- Using env() outside config files.
+
+## Examples
+- Constructor promotion + readonly:
+  final class Coordinates
+  {
+      public function __construct(
+          public readonly float $lat,
+          public readonly float $lng,
+      ) {}
+  }
+
+- Enum for subscription status:
+  enum SubscriptionStatus: string { case Active = 'active'; case Expired = 'expired'; case None = 'none'; }
+
+- Typed class constant:
+  final class Limits { public const int MAX_RESULTS = 50; }
+
+- never return type:
+  function unreachable(): never { throw new LogicException('Should not be reached'); }

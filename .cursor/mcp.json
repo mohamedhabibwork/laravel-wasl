@@ -1,0 +1,80 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "php",
+            "args": [
+                "./artisan",
+                "boost:mcp"
+            ]
+        },
+        "herd": {
+            "command": "php",
+            "args": [
+                "/Applications/Herd.app/Contents/Resources/herd-mcp.phar"
+            ],
+            "env": {
+                "SITE_PATH": "/Users/habib/Herd/EnjoyDrivingBackend"
+            }
+        },
+        "memory": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-memory"
+            ],
+            "env": {
+              "MEMORY_FILE_PATH": ""
+            },
+            "disabled": false
+          },
+          "sequential-thinking": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-sequential-thinking"
+            ],
+            "env": {},
+            "disabled": false
+          },
+          "puppeteer": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-puppeteer"
+            ],
+            "env": {},
+            "disabled": false
+          },
+          "postgresql": {
+            "command": "docker",
+            "args": [
+              "run",
+              "-i",
+              "--rm",
+              "mcp/postgres",
+            "postgres://postgres:@127.0.0.1:5432/enjoy"
+            ],
+            "env": {},
+            "disabled": false
+          },
+          "redis": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-redis"
+            ],
+            "env": {
+              "REDIS_URL": "redis://localhost:6379/0"
+            },
+            "disabled": false
+          },
+          "fetch": {
+            "command": "uvx",
+            "args": [
+              "mcp-server-fetch"
+            ],
+            "env": {},
+            "disabled": false
+          }
+    }
+}
