@@ -10,8 +10,8 @@ use Habib\LaravelWasl\Exceptions\WaslNotFoundException;
 use Habib\LaravelWasl\Exceptions\WaslServerException;
 use Habib\LaravelWasl\Exceptions\WaslUnauthorizedException;
 use Illuminate\Http\Client\PendingRequest;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Http;
 
 final class WaslClient
 {
@@ -36,8 +36,9 @@ final class WaslClient
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      * @return array<string, mixed>
+     *
      * @throws WaslException
      */
     public function get(string $endpoint, array $data = []): array
@@ -48,8 +49,9 @@ final class WaslClient
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      * @return array<string, mixed>
+     *
      * @throws WaslException
      */
     public function post(string $endpoint, array $data = []): array
@@ -60,8 +62,9 @@ final class WaslClient
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      * @return array<string, mixed>
+     *
      * @throws WaslException
      */
     public function patch(string $endpoint, array $data = []): array
@@ -73,6 +76,7 @@ final class WaslClient
 
     /**
      * @return array<string, mixed>
+     *
      * @throws WaslException
      */
     private function handleResponse(\Illuminate\Http\Client\Response $response): array
@@ -112,4 +116,3 @@ final class WaslClient
         return $body;
     }
 }
-

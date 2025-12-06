@@ -41,7 +41,7 @@ final class WaslErrorMessageHelper
     /**
      * Get trip rejection reason description.
      *
-     * @param bool $arabic If true, returns Arabic description
+     * @param  bool  $arabic  If true, returns Arabic description
      */
     public static function getTripRejectionReason(string $reason, bool $arabic = false): ?string
     {
@@ -205,4 +205,3 @@ final class WaslErrorMessageHelper
         ];
     }
 }
-

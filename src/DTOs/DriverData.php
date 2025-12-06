@@ -19,11 +19,11 @@ namespace Habib\LaravelWasl\DTOs;
 final readonly class DriverData
 {
     /**
-     * @param string $identityNumber Driver identity number (10 digits)
-     * @param string $emailAddress Driver email address
-     * @param string $mobileNumber Mobile number in format +966XXXXXXXXX
-     * @param string|null $dateOfBirthHijri Date of birth in Hijri format (YYYY-MM-DD or YYYY/MM/DD) for Saudi drivers
-     * @param string|null $dateOfBirthGregorian Date of birth in Gregorian format (YYYY-MM-DD) for Non-Saudi drivers
+     * @param  string  $identityNumber  Driver identity number (10 digits)
+     * @param  string  $emailAddress  Driver email address
+     * @param  string  $mobileNumber  Mobile number in format +966XXXXXXXXX
+     * @param  string|null  $dateOfBirthHijri  Date of birth in Hijri format (YYYY-MM-DD or YYYY/MM/DD) for Saudi drivers
+     * @param  string|null  $dateOfBirthGregorian  Date of birth in Gregorian format (YYYY-MM-DD) for Non-Saudi drivers
      *
      * @throws \InvalidArgumentException If validation fails
      */
@@ -95,4 +95,3 @@ final readonly class DriverData
         return $data;
     }
 }
-

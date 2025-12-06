@@ -20,8 +20,7 @@ final class LaravelWasl
 {
     public function __construct(
         private readonly WaslClient $client,
-    ) {
-    }
+    ) {}
 
     /**
      * Register a driver and vehicle
@@ -82,7 +81,8 @@ final class LaravelWasl
     /**
      * Update one or more trips
      *
-     * @param TripUpdateRequest|array<TripUpdateRequest> $request
+     * @param  TripUpdateRequest|array<TripUpdateRequest>  $request
+     *
      * @throws \Habib\LaravelWasl\Exceptions\WaslException
      */
     public function updateTrips(TripUpdateRequest|array $request): TripUpdateResponse
@@ -98,7 +98,8 @@ final class LaravelWasl
     /**
      * Update one or more vehicle locations
      *
-     * @param LocationUpdateRequest|array<LocationUpdateRequest> $request
+     * @param  LocationUpdateRequest|array<LocationUpdateRequest>  $request
+     *
      * @throws \Habib\LaravelWasl\Exceptions\WaslException
      */
     public function updateLocations(LocationUpdateRequest|array $request): LocationUpdateResponse

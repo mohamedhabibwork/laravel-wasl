@@ -35,4 +35,3 @@ enum PlateType: string
         };
     }
 }
-

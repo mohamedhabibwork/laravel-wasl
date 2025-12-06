@@ -17,13 +17,13 @@ namespace Habib\LaravelWasl\DTOs;
 final readonly class TripUpdateRequest
 {
     /**
-     * @param string $tripId Trip ID that must exist in Wasl
-     * @param float|null $customerRating Customer rating (0-5) if provided
-     * @param float|null $originLatitude Origin latitude (-90 to 90) if provided
-     * @param float|null $originLongitude Origin longitude (-180 to 180) if provided
-     * @param float|null $destinationLatitude Destination latitude (-90 to 90) if provided
-     * @param float|null $destinationLongitude Destination longitude (-180 to 180) if provided
-     * @param float|null $tripCost Trip cost in Saudi Riyals if provided
+     * @param  string  $tripId  Trip ID that must exist in Wasl
+     * @param  float|null  $customerRating  Customer rating (0-5) if provided
+     * @param  float|null  $originLatitude  Origin latitude (-90 to 90) if provided
+     * @param  float|null  $originLongitude  Origin longitude (-180 to 180) if provided
+     * @param  float|null  $destinationLatitude  Destination latitude (-90 to 90) if provided
+     * @param  float|null  $destinationLongitude  Destination longitude (-180 to 180) if provided
+     * @param  float|null  $tripCost  Trip cost in Saudi Riyals if provided
      *
      * @throws \InvalidArgumentException If validation fails
      */
@@ -92,7 +92,7 @@ final readonly class TripUpdateRequest
     }
 
     /**
-     * @param array<TripUpdateRequest> $trips
+     * @param  array<TripUpdateRequest>  $trips
      * @return array<string, mixed>
      */
     public static function toBulkArray(array $trips): array
@@ -109,4 +109,3 @@ final readonly class TripUpdateRequest
         ];
     }
 }
-

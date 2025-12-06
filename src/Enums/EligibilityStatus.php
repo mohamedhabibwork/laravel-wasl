@@ -10,4 +10,3 @@ enum EligibilityStatus: string
     case INVALID = 'INVALID';
     case PENDING = 'PENDING';
 }
-

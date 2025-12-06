@@ -15,7 +15,7 @@ namespace Habib\LaravelWasl\DTOs;
 final readonly class DriverEligibilityBulkRequest
 {
     /**
-     * @param array<string> $driverIds Array of driver identity numbers (10 digits each)
+     * @param  array<string>  $driverIds  Array of driver identity numbers (10 digits each)
      *
      * @throws \InvalidArgumentException If validation fails
      */
@@ -51,4 +51,3 @@ final readonly class DriverEligibilityBulkRequest
         ];
     }
 }
-

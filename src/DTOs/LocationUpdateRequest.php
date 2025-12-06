@@ -18,12 +18,12 @@ namespace Habib\LaravelWasl\DTOs;
 final readonly class LocationUpdateRequest
 {
     /**
-     * @param string $driverIdentityNumber Driver identity number (10 digits)
-     * @param string $vehicleSequenceNumber Vehicle sequence number (9 digits)
-     * @param float $latitude Latitude (-90 to 90)
-     * @param float $longitude Longitude (-180 to 180)
-     * @param bool $hasCustomer Whether vehicle has a customer (true/false)
-     * @param string $updatedWhen Update timestamp in ISO 8601 format (KSA timezone)
+     * @param  string  $driverIdentityNumber  Driver identity number (10 digits)
+     * @param  string  $vehicleSequenceNumber  Vehicle sequence number (9 digits)
+     * @param  float  $latitude  Latitude (-90 to 90)
+     * @param  float  $longitude  Longitude (-180 to 180)
+     * @param  bool  $hasCustomer  Whether vehicle has a customer (true/false)
+     * @param  string  $updatedWhen  Update timestamp in ISO 8601 format (KSA timezone)
      *
      * @throws \InvalidArgumentException If validation fails
      */
@@ -60,7 +60,7 @@ final readonly class LocationUpdateRequest
     }
 
     /**
-     * @param array<LocationUpdateRequest> $locations
+     * @param  array<LocationUpdateRequest>  $locations
      * @return array<string, mixed>
      */
     public static function toBulkArray(array $locations): array
@@ -77,4 +77,3 @@ final readonly class LocationUpdateRequest
         ];
     }
 }
-

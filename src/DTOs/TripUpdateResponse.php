@@ -7,17 +7,16 @@ namespace Habib\LaravelWasl\DTOs;
 final readonly class TripUpdateResponse
 {
     /**
-     * @param array<RejectedTripResponse> $rejectedTrips
+     * @param  array<RejectedTripResponse>  $rejectedTrips
      */
     public function __construct(
         public bool $success,
         public string $resultCode,
         public array $rejectedTrips = [],
-    ) {
-    }
+    ) {}
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public static function fromArray(array $data): self
     {
@@ -36,4 +35,3 @@ final readonly class TripUpdateResponse
         );
     }
 }
-

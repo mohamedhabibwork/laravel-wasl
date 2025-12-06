@@ -16,4 +16,3 @@ class WaslServerException extends WaslException
         parent::__construct($message, $code, $previous, $resultCode, $resultMsg);
     }
 }
-

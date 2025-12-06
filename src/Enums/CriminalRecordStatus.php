@@ -15,4 +15,3 @@ enum CriminalRecordStatus: string
     case DONE_RESULT_NOT_OK = 'DONE_RESULT_NOT_OK';
     case REQUEST_EXPIRED = 'REQUEST_EXPIRED';
 }
-

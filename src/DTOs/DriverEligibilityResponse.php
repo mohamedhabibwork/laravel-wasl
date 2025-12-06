@@ -10,8 +10,8 @@ use Habib\LaravelWasl\Enums\EligibilityStatus;
 final readonly class DriverEligibilityResponse
 {
     /**
-     * @param array<VehicleEligibilityResponse> $vehicles
-     * @param array<string>|null $rejectionReasons
+     * @param  array<VehicleEligibilityResponse>  $vehicles
+     * @param  array<string>|null  $rejectionReasons
      */
     public function __construct(
         public string $identityNumber,
@@ -21,11 +21,10 @@ final readonly class DriverEligibilityResponse
         public ?array $rejectionReasons = null,
         public ?CriminalRecordStatus $criminalRecordStatus = null,
         public array $vehicles = [],
-    ) {
-    }
+    ) {}
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public static function fromArray(array $data): self
     {
@@ -55,4 +54,3 @@ final readonly class DriverEligibilityResponse
         );
     }
 }
-

@@ -5,20 +5,19 @@ declare(strict_types=1);
 namespace Habib\LaravelWasl\DTOs;
 
 /**
- * @param array<DriverEligibilityResponse> $responses
+ * @param  array<DriverEligibilityResponse>  $responses
  */
 final readonly class DriverEligibilityBulkResponse
 {
     /**
-     * @param array<DriverEligibilityResponse> $responses
+     * @param  array<DriverEligibilityResponse>  $responses
      */
     public function __construct(
         public array $responses,
-    ) {
-    }
+    ) {}
 
     /**
-     * @param array<array<string, mixed>> $data
+     * @param  array<array<string, mixed>>  $data
      */
     public static function fromArray(array $data): self
     {
@@ -30,4 +29,3 @@ final readonly class DriverEligibilityBulkResponse
         return new self(responses: $responses);
     }
 }
-

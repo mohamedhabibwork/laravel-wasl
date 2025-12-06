@@ -20,25 +20,25 @@ namespace Habib\LaravelWasl\DTOs;
 final readonly class TripRegistrationRequest
 {
     /**
-     * @param string $sequenceNumber Vehicle sequence number
-     * @param string $driverId Driver identity number (10 digits)
-     * @param string $tripId Unique trip identifier (string format)
-     * @param int $distanceInMeters Distance traveled in meters (minimum 1)
-     * @param int $durationInSeconds Trip duration in seconds (minimum 1)
-     * @param float $customerRating Customer rating (0-5, 0 for unrated trips)
-     * @param int|null $customerWaitingTimeInSeconds Customer waiting time in seconds
-     * @param string|null $originCityNameInArabic Origin city name in Arabic
-     * @param string|null $destinationCityNameInArabic Destination city name in Arabic
-     * @param float $originLatitude Origin latitude (-90 to 90)
-     * @param float $originLongitude Origin longitude (-180 to 180)
-     * @param float $destinationLatitude Destination latitude (-90 to 90)
-     * @param float $destinationLongitude Destination longitude (-180 to 180)
-     * @param string $pickupTimestamp Pickup timestamp in ISO 8601 format (KSA timezone)
-     * @param string $dropoffTimestamp Dropoff timestamp in ISO 8601 format (KSA timezone)
-     * @param string $startedWhen Trip start timestamp in ISO 8601 format (KSA timezone)
-     * @param float $tripCost Trip cost in Saudi Riyals (mandatory)
-     * @param string|null $driverArrivalTime Driver arrival time in ISO 8601 format (KSA timezone)
-     * @param string|null $driverAssignTime Driver assignment time in ISO 8601 format (KSA timezone)
+     * @param  string  $sequenceNumber  Vehicle sequence number
+     * @param  string  $driverId  Driver identity number (10 digits)
+     * @param  string  $tripId  Unique trip identifier (string format)
+     * @param  int  $distanceInMeters  Distance traveled in meters (minimum 1)
+     * @param  int  $durationInSeconds  Trip duration in seconds (minimum 1)
+     * @param  float  $customerRating  Customer rating (0-5, 0 for unrated trips)
+     * @param  int|null  $customerWaitingTimeInSeconds  Customer waiting time in seconds
+     * @param  string|null  $originCityNameInArabic  Origin city name in Arabic
+     * @param  string|null  $destinationCityNameInArabic  Destination city name in Arabic
+     * @param  float  $originLatitude  Origin latitude (-90 to 90)
+     * @param  float  $originLongitude  Origin longitude (-180 to 180)
+     * @param  float  $destinationLatitude  Destination latitude (-90 to 90)
+     * @param  float  $destinationLongitude  Destination longitude (-180 to 180)
+     * @param  string  $pickupTimestamp  Pickup timestamp in ISO 8601 format (KSA timezone)
+     * @param  string  $dropoffTimestamp  Dropoff timestamp in ISO 8601 format (KSA timezone)
+     * @param  string  $startedWhen  Trip start timestamp in ISO 8601 format (KSA timezone)
+     * @param  float  $tripCost  Trip cost in Saudi Riyals (mandatory)
+     * @param  string|null  $driverArrivalTime  Driver arrival time in ISO 8601 format (KSA timezone)
+     * @param  string|null  $driverAssignTime  Driver assignment time in ISO 8601 format (KSA timezone)
      *
      * @throws \InvalidArgumentException If validation fails
      */
@@ -49,9 +49,9 @@ final readonly class TripRegistrationRequest
         public int $distanceInMeters,
         public int $durationInSeconds,
         public float $customerRating,
-        public ?int $customerWaitingTimeInSeconds = null,
-        public ?string $originCityNameInArabic = null,
-        public ?string $destinationCityNameInArabic = null,
+        public ?int $customerWaitingTimeInSeconds,
+        public ?string $originCityNameInArabic,
+        public ?string $destinationCityNameInArabic,
         public float $originLatitude,
         public float $originLongitude,
         public float $destinationLatitude,
@@ -137,4 +137,3 @@ final readonly class TripRegistrationRequest
         return $data;
     }
 }
-

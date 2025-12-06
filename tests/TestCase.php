@@ -2,9 +2,9 @@
 
 namespace Habib\LaravelWasl\Tests;
 
+use Habib\LaravelWasl\LaravelWaslServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Habib\LaravelWasl\LaravelWaslServiceProvider;
 
 class TestCase extends Orchestra
 {

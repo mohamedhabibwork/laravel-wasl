@@ -19,12 +19,12 @@ use Habib\LaravelWasl\Rules\WaslPlateLetter;
 final readonly class VehicleData
 {
     /**
-     * @param string $sequenceNumber Vehicle sequence number (9 digits)
-     * @param string $plateLetterRight Right plate letter (valid Arabic letter)
-     * @param string $plateLetterMiddle Middle plate letter (valid Arabic letter)
-     * @param string $plateLetterLeft Left plate letter (valid Arabic letter)
-     * @param string $plateNumber Plate number (1-4 digits)
-     * @param string $plateType Plate type (integer 1-11)
+     * @param  string  $sequenceNumber  Vehicle sequence number (9 digits)
+     * @param  string  $plateLetterRight  Right plate letter (valid Arabic letter)
+     * @param  string  $plateLetterMiddle  Middle plate letter (valid Arabic letter)
+     * @param  string  $plateLetterLeft  Left plate letter (valid Arabic letter)
+     * @param  string  $plateNumber  Plate number (1-4 digits)
+     * @param  string  $plateType  Plate type (integer 1-11)
      *
      * @throws \InvalidArgumentException If validation fails
      */
@@ -85,4 +85,3 @@ final readonly class VehicleData
         ];
     }
 }
-

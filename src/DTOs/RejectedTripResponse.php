@@ -9,11 +9,10 @@ final readonly class RejectedTripResponse
     public function __construct(
         public string $tripId,
         public string $rejectionReason,
-    ) {
-    }
+    ) {}
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public static function fromArray(array $data): self
     {
@@ -23,4 +22,3 @@ final readonly class RejectedTripResponse
         );
     }
 }
-

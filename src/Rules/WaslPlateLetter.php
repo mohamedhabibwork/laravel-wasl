@@ -43,14 +43,13 @@ final class WaslPlateLetter implements ValidationRule
     /**
      * Run the validation rule.
      *
-     * @param string $attribute
-     * @param mixed $value
-     * @param Closure(string, string=): void $fail
+     * @param  Closure(string, string=): void  $fail
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         if (! is_string($value)) {
             $fail('The :attribute must be a string.');
+
             return;
         }
 
@@ -60,4 +59,3 @@ final class WaslPlateLetter implements ValidationRule
         }
     }
 }
-

@@ -16,4 +16,3 @@ class WaslNotFoundException extends WaslException
         parent::__construct($message, $code, $previous, $resultCode, $resultMsg);
     }
 }
-

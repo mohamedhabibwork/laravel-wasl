@@ -9,8 +9,7 @@ final readonly class DriverRegistrationRequest
     public function __construct(
         public DriverData $driver,
         public VehicleData $vehicle,
-    ) {
-    }
+    ) {}
 
     /**
      * @return array<string, mixed>
@@ -23,4 +22,3 @@ final readonly class DriverRegistrationRequest
         ];
     }
 }
-

@@ -10,7 +10,7 @@ use Habib\LaravelWasl\Enums\Gender;
 final readonly class DriverRegistrationResponse
 {
     /**
-     * @param array<string>|null $rejectionReasons
+     * @param  array<string>|null  $rejectionReasons
      */
     public function __construct(
         public EligibilityStatus $eligibility,
@@ -20,11 +20,10 @@ final readonly class DriverRegistrationResponse
         public ?string $driverFullNameEnglish = null,
         public ?Gender $driverGender = null,
         public ?array $rejectionReasons = null,
-    ) {
-    }
+    ) {}
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public static function fromArray(array $data): self
     {
@@ -39,4 +38,3 @@ final readonly class DriverRegistrationResponse
         );
     }
 }
-
